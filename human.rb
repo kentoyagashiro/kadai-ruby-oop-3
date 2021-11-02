@@ -2,6 +2,7 @@ require './thinkable'
 require './animal'
 
 class Human < Animal
+  include Thinkable
   attr_accessor :hobby
   
   def initialize(name, age, hobby)
@@ -10,7 +11,4 @@ class Human < Animal
     self.hobby = hobby
   end
   
-  def think
-    puts "私は#{self.hobby}について考えています。"
-  end
 end
